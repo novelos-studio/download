@@ -14,10 +14,6 @@
     "windows-x86_64": {
       "signature": "",
       "url": "https://download.novelos.studio/NovelOS-Setup-1.0.0.exe"
-    },
-    "linux-x86_64": {
-      "signature": "",
-      "url": ""
     }
   }
 }
