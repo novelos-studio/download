@@ -1,1 +1,23 @@
-{}
+{
+  "version": "1.0.0-beta.6",
+  "notes": "### Added\n- Support multi-languages\n\n### Fixed\n- Genealogy Editor glitch\n- Cartography Editor translations\n\n### Improved\n\n\n### Removed\n\n\n### Changed\n\n\n### Security\n",
+  "pub_date": "2026-01-07T03:48:22.420Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "",
+      "url": "https://download.novelos.studio/NovelOS-1.0.0.dmg"
+    },
+    "darwin-x86_64": {
+      "signature": "",
+      "url": "https://download.novelos.studio/NovelOS-1.0.0.dmg"
+    },
+    "windows-x86_64": {
+      "signature": "",
+      "url": "https://download.novelos.studio/NovelOS-Setup-1.0.0.exe"
+    },
+    "linux-x86_64": {
+      "signature": "",
+      "url": ""
+    }
+  }
+}
