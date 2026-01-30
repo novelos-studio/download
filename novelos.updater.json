@@ -4,15 +4,15 @@
   "pub_date": "2026-01-30T15:43:45.319Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "sha256:11ab0ccdd1a44985069a630f0b2524a18f4003702adaac9004e80e6b52c1737e",
+      "signature": "",
       "url": "https://github.com/novelos-studio/download/releases/download/v1.0.0/NovelOS-Setup.dmg"
     },
     "darwin-x86_64": {
-      "signature": "sha256:11ab0ccdd1a44985069a630f0b2524a18f4003702adaac9004e80e6b52c1737e",
+      "signature": "",
       "url": "https://github.com/novelos-studio/download/releases/download/v1.0.0/NovelOS-Setup.dmg"
     },
     "windows-x86_64": {
-      "signature": "sha256:62eaf57cc91bad052095a911dccd826407247c3ebefdc0d71a5385d700541fd6",
+      "signature": "",
       "url": "https://github.com/novelos-studio/download/releases/download/v1.0.0/NovelOS-Setup.msi"
     }
   }
