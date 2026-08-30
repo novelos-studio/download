@@ -1,19 +1,19 @@
 {
-  "version": "1.2.0",
-  "notes": "See release notes here https://github.com/novelos-studio/download/releases/tag/v1.2.0",
-  "pub_date": "2026-08-24T06:38:22.704Z",
+  "version": "1.3.0",
+  "notes": "A new version of NovelOS is available. Download the latest version from https://novelos.studio/downloads/ and install it manually. See release notes: https://github.com/novelos-studio/download/releases/tag/v1.3.0",
+  "pub_date": "2026-08-29T22:19:37.877Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkllQ2ZTUERoY3ZURWtHTEtkUkVDdDhPSWc1cjhMV2tFanA5NTB1UVhxUGpOdk9pWmRla0ltdG5TdEU1V1FsbGVHWXRMTW4xWUFYSEVLc1JSaHFvUFF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NTU0OTA3CWZpbGU6Tm92ZWxPUy5hcHAudGFyLmd6CmNPUDlBaW5VTmJ2SHZ0SmVBTmJZL01oRExPbGZoc0ZNaEVmSWtSa1VxNjhzdllEa2hqSUdodHY4RUFIK0YySmljdlBRblZVdUhmUWZDMkhqaFZhY0JnPT0K",
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.2.0//NovelOS-Setup.dmg"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkhFRTQ5MnN6U0JUZWhudDFFWWxoZzMrSUQ1SlJVclVUY0JMZ3pVMGJCaXlKWTk0dVRncE9JY1EzR3llWWhQaWRMMGZrSkZkY3dWMDRPQm55UTlqbndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MDQzNzM0CWZpbGU6Tm92ZWxPUy5hcHAudGFyLmd6CjNXcEF0Q245SUh4Qy83RitTdWlPdkJGWWVGdDZpdUo2dWR6NG12RGhjbUcza0RKbGRUN0RDeTk0NFIzWDQrZXA3SmpkaTBzcWdDY2hjTHAvK1hTRkNRPT0K",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.3.0/NovelOS-Setup.dmg"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkllQ2ZTUERoY3ZURWtHTEtkUkVDdDhPSWc1cjhMV2tFanA5NTB1UVhxUGpOdk9pWmRla0ltdG5TdEU1V1FsbGVHWXRMTW4xWUFYSEVLc1JSaHFvUFF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NTU0OTA3CWZpbGU6Tm92ZWxPUy5hcHAudGFyLmd6CmNPUDlBaW5VTmJ2SHZ0SmVBTmJZL01oRExPbGZoc0ZNaEVmSWtSa1VxNjhzdllEa2hqSUdodHY4RUFIK0YySmljdlBRblZVdUhmUWZDMkhqaFZhY0JnPT0K",
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.2.0/NovelOS-Setup.dmg"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkhFRTQ5MnN6U0JUZWhudDFFWWxoZzMrSUQ1SlJVclVUY0JMZ3pVMGJCaXlKWTk0dVRncE9JY1EzR3llWWhQaWRMMGZrSkZkY3dWMDRPQm55UTlqbndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MDQzNzM0CWZpbGU6Tm92ZWxPUy5hcHAudGFyLmd6CjNXcEF0Q245SUh4Qy83RitTdWlPdkJGWWVGdDZpdUo2dWR6NG12RGhjbUcza0RKbGRUN0RDeTk0NFIzWDQrZXA3SmpkaTBzcWdDY2hjTHAvK1hTRkNRPT0K",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.3.0/NovelOS-Setup.dmg"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVk5SWG02aGUxN1ZmdjhhSS90azlOOCs1STZ4U0MxcVRWUUJhMmRWOUFCVS9Nb3c3a3lGOXBSQzRESU5OTGNsV21pZTNsTzhzaDdZc3NhRWFKMkVKMWcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NTU0OTk4CWZpbGU6Tm92ZWxPU18xLjIuMF94NjRfZW4tVVMubXNpCkRxUmxRV21veG1WSk5hQjdndzJ3N3FkSlF1L1lGUDlPVzcyWHFiS1J4WnZtWnM4T0FIMmd3azcvWHgzM3lHRk9JQnIyNGdLMEkwanpCdm9kRFFFRkNRPT0K",
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.2.0/NovelOS-Setup.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkQ0YjhEWGVxZHErYTZEa0dYYlB0TTA0WVBERXZ4Nm1sc0JzNUVFZ1R1UTcrTXk2UDY2QmhhcFlGYys5VWNKK2NnZkdxWDFpTlhic0krVW9UN1RkbWdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MDUxMjMwCWZpbGU6Tm92ZWxPU18xLjMuMF94NjQtc2V0dXAuZXhlCmo5N1dnS21lMkllNXdjcnRBM3IwN3RaelhDQThBY2pMNUpOOE1HeXVNMzNUeWF1RVZ5Mk1XRHk5ejh3N0owNkJCQVZuVWV3Q0JnTHVrbGpqUkI5WURBPT0K",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.3.0/NovelOS-Setup.msi"
     }
   }
 }
