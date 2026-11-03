@@ -1,0 +1,168 @@
+# Builds NovelOS for macOS (Apple Silicon and Intel) and Windows, and attaches the installers to
+# the draft release. It runs the same commands as a manual release:
+#   pnpm --filter novelos tauri:build:mac   (Apple Silicon, then Intel)
+#   pnpm --filter novelos tauri:build:win   (.msi and setup .exe)
+#   pnpm release:collect --platform mac|win (the standard file names)
+#
+# Started by `pnpm release:draft` (after you answer yes) or by hand from the Actions tab.
+# This repo is public, so standard runners are free. The private source is read with a
+# read-only deploy key. Logs are public: secrets are only ever read from `secrets.*` (masked)
+# and nothing from them is printed. Installers go only to the draft release, never to
+# workflow artifacts (those would be public here).
+name: Build release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to build, without the v (for example 1.5.0)
+        required: true
+      ref:
+        description: Source branch, tag or commit to build (default v<version>)
+        required: false
+      release_tag:
+        description: Draft release to attach to (default v<version>; use a throwaway draft to test CI)
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ inputs.version }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: macOS (Apple Silicon and Intel)
+            os: macos-14
+            platform: mac
+            rust_targets: aarch64-apple-darwin,x86_64-apple-darwin
+            files: NovelOS-Setup.dmg NovelOS.app.tar.gz NovelOS-Setup-intel.dmg NovelOS-intel.app.tar.gz
+          - name: Windows
+            os: windows-latest
+            platform: win
+            rust_targets: x86_64-pc-windows-msvc
+            files: NovelOS-Setup.msi NovelOS-Setup.exe
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ inputs.version }}
+      RELEASE_TAG: ${{ inputs.release_tag || format('v{0}', inputs.version) }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check the draft release exists
+        run: |
+          draft=$(gh release view "$RELEASE_TAG" -R "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft 2>/dev/null || echo missing)
+          if [ "$draft" != "true" ]; then
+            echo "::error::No draft release $RELEASE_TAG in $GITHUB_REPOSITORY. Run pnpm release:draft first."
+            exit 1
+          fi
+
+      - name: Check secrets are present
+        env:
+          HAS_DEPLOY_KEY: ${{ secrets.SOURCE_REPO_DEPLOY_KEY != '' }}
+          HAS_SIGNING_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY != '' }}
+          HAS_SIGNING_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD != '' }}
+          HAS_BUILD_ENV: ${{ secrets.DESKTOP_BUILD_ENV != '' }}
+        run: |
+          missing=""
+          [ "$HAS_DEPLOY_KEY" = "true" ] || missing="$missing SOURCE_REPO_DEPLOY_KEY"
+          [ "$HAS_SIGNING_KEY" = "true" ] || missing="$missing TAURI_SIGNING_PRIVATE_KEY"
+          [ "$HAS_SIGNING_PASSWORD" = "true" ] || missing="$missing TAURI_SIGNING_PRIVATE_KEY_PASSWORD"
+          [ "$HAS_BUILD_ENV" = "true" ] || missing="$missing DESKTOP_BUILD_ENV"
+          if [ -n "$missing" ]; then echo "::error::Missing secrets:$missing"; exit 1; fi
+          echo "All four secrets are present."
+
+      - name: Check out the source
+        uses: actions/checkout@v4
+        with:
+          repository: novelos-studio/novelos
+          ref: ${{ inputs.ref || format('v{0}', inputs.version) }}
+          ssh-key: ${{ secrets.SOURCE_REPO_DEPLOY_KEY }}
+          path: src
+          persist-credentials: false
+
+      - name: Check the source is version ${{ inputs.version }}
+        working-directory: src
+        run: |
+          have=$(node -p "require('./manifest.json').version")
+          if [ "$have" != "$VERSION" ]; then
+            echo "::error::The source says $have, not $VERSION. Build the release commit (tag v$VERSION)."
+            exit 1
+          fi
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: src/package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: src/pnpm-lock.yaml
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust_targets }}
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src/apps/main/src-tauri -> target
+          key: ${{ matrix.platform }}
+
+      - name: Install dependencies
+        working-directory: src
+        run: pnpm install --frozen-lockfile
+
+      - name: Put the signing key and build settings in place
+        working-directory: src
+        env:
+          SIGNING_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          BUILD_ENV: ${{ secrets.DESKTOP_BUILD_ENV }}
+        run: |
+          printf '%s' "$SIGNING_KEY" > apps/main/src-tauri/novelos.key
+          printf '%s\n' "$BUILD_ENV" > apps/main/.env
+
+      - name: Build for macOS
+        if: matrix.platform == 'mac'
+        working-directory: src
+        env:
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        run: pnpm --filter novelos tauri:build:mac
+
+      - name: Build for Windows
+        if: matrix.platform == 'win'
+        working-directory: src
+        env:
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        run: pnpm --filter novelos tauri:build:win
+
+      - name: Collect under the release names
+        working-directory: src
+        run: pnpm release:collect --platform ${{ matrix.platform }}
+
+      - name: Attach to the draft release
+        working-directory: src/releases/${{ inputs.version }}
+        run: |
+          for f in ${{ matrix.files }}; do
+            if [ ! -s "$f" ]; then echo "::error::$f was not built"; exit 1; fi
+          done
+          gh release upload "$RELEASE_TAG" ${{ matrix.files }} --clobber -R "$GITHUB_REPOSITORY"
+          {
+            echo "### ${{ matrix.name }}"
+            echo
+            for f in ${{ matrix.files }}; do echo "- \`$f\` ($(du -h "$f" | cut -f1))"; done
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Remove the signing key and settings
+        if: always()
+        working-directory: src
+        run: rm -f apps/main/src-tauri/novelos.key apps/main/.env

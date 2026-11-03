@@ -1,0 +1,73 @@
+# When a release is published here, writes the update manifest the desktop app reads:
+#   novelos.updater.json       (releases)
+#   novelos.updater.beta.json  (pre-releases)
+#
+# It checks every installer is attached, downloads the four updater files, records size and
+# SHA-256, signs each with the update key, and commits the manifest to main. If a file is
+# missing or empty it writes nothing and says which file in the run summary.
+# Re-running for the same release writes the same file. Run it by hand to repair a manifest.
+name: Publish update manifest
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published release tag to write the manifest for (for example v1.5.0)
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manifest
+  cancel-in-progress: false
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ inputs.tag || github.event.release.tag_name }}
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: download
+
+      - name: Check out the release scripts
+        uses: actions/checkout@v4
+        with:
+          repository: novelos-studio/novelos
+          ref: main
+          ssh-key: ${{ secrets.SOURCE_REPO_DEPLOY_KEY }}
+          path: src
+          sparse-checkout: scripts/release
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Write the manifest
+        working-directory: src
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        run: npx --yes tsx@4 scripts/release/manifest.ts "$TAG" --repo "$GITHUB_REPOSITORY" --out ../download
+
+      - name: Commit it to main
+        working-directory: download
+        run: |
+          git add novelos.updater*.json
+          if git diff --cached --quiet; then
+            echo "The manifest for $TAG was already up to date." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git commit -m "release: manifest $TAG"
+          git push origin HEAD:main
