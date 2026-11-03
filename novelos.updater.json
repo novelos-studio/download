@@ -4,6 +4,7 @@
   "pub_date": "2026-10-15T16:43:42Z",
   "release_url": "https://github.com/novelos-studio/download/releases/tag/v1.4.2",
   "notes": "NovelOS 1.4.2: Free 7-day trial. On Windows and Mac, choose \"Try free for 7 days\" when NovelOS opens and enter your email. No card needed.",
+  "release_notes": "## New\n\n- **Free 7-day trial.** On Windows and Mac, choose \"Try free for 7 days\" when NovelOS opens and enter your email. No card needed.\n- **Buy any time.** The badge at the top shows how many days you have left. Click it to enter your license key. Everything you wrote stays.\n\n## Improved\n\n- **Opens faster.**\n- **Faster switching** between Overview, Spark, Cast & World, Blueprint and Manuscript.\n- **Smoother with big books** while you write and plan.\n- **Phone app opens much faster**, and still works offline.\n\n## Good to know\n\n- The trial has some limits: 1 book, 5 chapters, 3 characters, and PDF export only. AI features come with a license.\n- The trial is for Windows and Mac only. The phone app needs a license key.\n\n## How to update\n\nDownload 1.4.2 from https://novelos.studio/downloads/ and install it over your current version. Your books stay where they are. The phone app updates by itself next time you open it.",
   "downloads": {
     "darwin-aarch64": {
       "url": "https://github.com/novelos-studio/download/releases/download/v1.4.2/NovelOS.app.tar.gz",
