@@ -3,7 +3,7 @@
   "version": "1.4.2",
   "pub_date": "2026-10-15T16:43:42Z",
   "release_url": "https://github.com/novelos-studio/download/releases/tag/v1.4.2",
-  "notes": "NovelOS 1.4.2: Free 7-day trial. On Windows and Mac, choose \"Try free for 7 days\" when NovelOS opens and enter your email. No card needed.",
+  "notes": "A new version of NovelOS is available. Download the latest version from https://novelos.studio/downloads and install it manually.",
   "release_notes": "## New\n\n- **Free 7-day trial.** On Windows and Mac, choose \"Try free for 7 days\" when NovelOS opens and enter your email. No card needed.\n- **Buy any time.** The badge at the top shows how many days you have left. Click it to enter your license key. Everything you wrote stays.\n\n## Improved\n\n- **Opens faster.**\n- **Faster switching** between Overview, Spark, Cast & World, Blueprint and Manuscript.\n- **Smoother with big books** while you write and plan.\n- **Phone app opens much faster**, and still works offline.\n\n## Good to know\n\n- The trial has some limits: 1 book, 5 chapters, 3 characters, and PDF export only. AI features come with a license.\n- The trial is for Windows and Mac only. The phone app needs a license key.\n\n## How to update\n\nDownload 1.4.2 from https://novelos.studio/downloads/ and install it over your current version. Your books stay where they are. The phone app updates by itself next time you open it.",
   "downloads": {
     "darwin-aarch64": {
@@ -33,12 +33,12 @@
   },
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVklNWUVjbm1QbkZrWXNndUxIVU9PRDVZRW1seU5uVlVMK0lKajI3RTlzanBGR0RLWWxmWkJOUDFiSXB3MzdZYzhKd3dUUy9OUFRmWmpGblRnQU8zZ2drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjk2MjUzCWZpbGU6Tm92ZWxPUy5hcHAudGFyLmd6ClRNU0pMcTEvdk1IVloyZDNEcFpmaHJDV3BUb05nYmgydUJXRWxQck00Q2tQVmN1Z2xwTkRETjB5QnBxYzlTbUhzdnExRGNZcnJuQmFqb2Yvc2NwREJRPT0K",
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.4.2/NovelOS.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVlArNTZ2cDMvelhjcEI3YVJ0b21sV3o0RTZ1dXpQZ1gvbmJxSXJqWWJPd0gvNng0QkJTSUJVSmFJK0w1WjA2MG5qVjY2MVFNMDE1ZjRBcEFOdjRsM2dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjk4NDQwCWZpbGU6Tm92ZWxPUy1TZXR1cC5kbWcKOEFjdEIyMVM3d2F0SUc3N250RFRUOUQyL3FwS3V1WjZoTW1hNm16QVExTitXYmI3ZzJyQkdWaXVMSS91MDVSK0VNMHlUTkZNMFM0bk9XQ3VNSFo4QUE9PQo=",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.4.2/NovelOS-Setup.dmg"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkdrM0JJVkJxemd4U1IwblpucTZibGRsR0FHcEJzV1kxaTNxOU9HUTVQd2E2Zy9FRzdSZWM5RG4xQ1NNYnYrSzFvNWlqMEpRWXNSazVXdDV3MjgwT0FZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjk2MjU0CWZpbGU6Tm92ZWxPUy1pbnRlbC5hcHAudGFyLmd6Clk3NklPM3VrdHgzVkFkbWFQcjgwNEpjVzIrNFNoYnI2RVBzMTRJamJXYUYvOXdCTmg3UkhmamphRjVHZVVJcmo4ckNvelJPZVVmVUpjUUQ0QzgyUENnPT0K",
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.4.2/NovelOS-intel.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkp3ZDhKVHg4TWtlY1dvdE1HU1BoRmF4UmhsckJPajA0NGRnNng2YkZpTGhwa29DY1BrT3RSNkpyRUxqay9NM09YOUxzcjJjWVZveWx6TDNxNHBCVndBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjk4NDQyCWZpbGU6Tm92ZWxPUy1TZXR1cC1pbnRlbC5kbWcKandBdWY4V3RVRUxDZS9LTk9rY2UzcVZDYzVNeEovdGQ1VmdPUi9SVTlzVUxKbGQ5U0JHUjhHZ09YMTZLd3VHdU5Tb2M4T1E2S0t4M2FGbUJ5cGhHQmc9PQo=",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.4.2/NovelOS-Setup-intel.dmg"
     },
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkhZRVpuWlpYdnl3ZC80TGpFUVJrQVhUQyttTEJoRGF5WE00M3kwM3ZpdEcyL1lxMmJCV0RURTVEZWdXUzBwZTBnQXEzS2FnenNibjVwcW9XRnB4VHdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjk2MjU3CWZpbGU6Tm92ZWxPUy1TZXR1cC5tc2kKWVQrU1dWS1RYbENtdnB0VFBKeVdDWXQ3Q3hHK2hpbU03OG8wRDJKc0tzUllMdnVTMS9uTVJMWTZzVVpMSEJ5UlVRUElEVGVXT3BWL1Yra1JzWjJYQWc9PQo=",
