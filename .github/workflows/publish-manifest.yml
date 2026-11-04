@@ -43,7 +43,7 @@ jobs:
         with:
           repository: novelos-studio/novelos
           ref: main
-          ssh-key: ${{ secrets.SOURCE_REPO_DEPLOY_KEY }}
+          token: ${{ secrets.SOURCE_REPO_TOKEN }}
           path: src
           sparse-checkout: scripts/release
           persist-credentials: false
