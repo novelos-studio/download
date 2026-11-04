@@ -6,6 +6,7 @@
 # SHA-256, signs each with the update key, and commits the manifest to main. If a file is
 # missing or empty it writes nothing and says which file in the run summary.
 # Re-running for the same release writes the same file. Run it by hand to repair a manifest.
+# For a release (not a pre-release) it then starts deploy-sites in novelos-studio/novelos.
 name: Publish update manifest
 
 on:
@@ -71,3 +72,14 @@ jobs:
           git config user.email "41898+github-actions[bot]@users.noreply.github.com"
           git commit -m "release: manifest $TAG"
           git push origin HEAD:main
+
+      # Once the update feed lists the release, deploy novelos.studio and the phone app from the
+      # source repo, so the download buttons and the changelog move to it. Pre-releases (a tag
+      # with "-", such as v1.6.0-rc.1) only reach the beta feed and leave the website alone.
+      - name: Deploy the website and phone app
+        if: ${{ !contains(env.TAG, '-') }}
+        env:
+          GH_TOKEN: ${{ secrets.SOURCE_REPO_TOKEN }}
+        run: |
+          gh workflow run deploy-sites.yml -R novelos-studio/novelos -f tag="$TAG"
+          echo "Started the website and phone app deploy for $TAG: https://github.com/novelos-studio/novelos/actions/workflows/deploy-sites.yml" >> "$GITHUB_STEP_SUMMARY"
