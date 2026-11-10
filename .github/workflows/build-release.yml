@@ -41,7 +41,7 @@ jobs:
       matrix:
         include:
           - name: macOS (Apple Silicon and Intel)
-            os: macos-14
+            os: macos-15
             platform: mac
             rust_targets: aarch64-apple-darwin,x86_64-apple-darwin
             files: NovelOS-Setup.dmg NovelOS.app.tar.gz NovelOS-Setup-intel.dmg NovelOS-intel.app.tar.gz
