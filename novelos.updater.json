@@ -1,48 +1,48 @@
 {
   "schema": 2,
-  "version": "1.5.1",
-  "pub_date": "2026-11-04T09:44:47Z",
-  "release_url": "https://github.com/novelos-studio/download/releases/tag/v1.5.1",
+  "version": "1.5.2",
+  "pub_date": "2026-11-10T04:08:31Z",
+  "release_url": "https://github.com/novelos-studio/download/releases/tag/v1.5.2",
   "notes": "A new version of NovelOS is available. Download the latest version from https://novelos.studio/downloads and install it manually.",
-  "release_notes": "## Improved\n\n- **Scenes in the table of contents.** Prefer a list of chapters only? Turn off Scenes in Table of Contents in Settings, Editor & Typography. Your *** scene breaks stay in your text.\n\n## Good to know\n\n- On 1.5.0, NovelOS offers this update itself and installs it when you restart. On 1.4.2 or earlier, download it from novelos.studio/downloads.",
+  "release_notes": "## Fixed\n\n- **Read Aloud speaks English again.** On some Macs and phones, every voice sounded like Mandarin. Reading aloud and the voice samples now sound as they should on every device.\n- **Word exports keep every paragraph.** A paragraph with a comment on it came out empty in the Word file. The text and the comment now both come through.\n- **The phone app opens on Android tablets.** Some tablets were told NovelOS Mobile is made for phones. They now open the app.\n- **Focus mode on the phone.** The Exit focus mode button is always on screen, and reopening a book in focus mode no longer forces full screen.\n- **Licence check on the phone.** If the connection drops while NovelOS checks your licence key, it tries once more. When you open the app offline, your saved licence keeps you signed in.\n\n## Good to know\n\n- On 1.5.0 or later, NovelOS offers this update itself and installs it when you restart. On 1.4.2 or earlier, download it from novelos.studio/downloads.",
   "downloads": {
     "darwin-aarch64": {
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.1/NovelOS.app.tar.gz",
-      "size": 18205028,
-      "sha256": "ddbd6228969faff0214b87e789e4f91cc44dbfa555d0fd3754dcf81283fb1be0",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVk5SNDQ0SHVkbEFzUlNJM2wvTzFWMXhwNUxldUQ2Yy9jUVZHS1MxOVU2WDJHK2c0UGdmQVBIb1F5Nkw3MmZCckhxQnY3SDNXNTB0cG1KUXRZZkdwVVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzg2NDk1CWZpbGU6Tm92ZWxPUy5hcHAudGFyLmd6ClhZQUVTbDRHc1J2V0pZbDVGN3B3bTQycXpkMmpSb2VyS1YyUG9vMjl1Z3RWNlV6M3NVcE9jMkpxR2RpNDhBQ2FzZFBKQm1HcEMySVVkNVQxdnROakRnPT0K"
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.2/NovelOS.app.tar.gz",
+      "size": 18205191,
+      "sha256": "838b45d2492dac44b6db32fdc2427a3574b3182d1ff3b3607b28fd7bae42b615",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkJ4Y0pKTGRxZzlOODhsSm5oUlVwblZxSU1mb0lMQmlIbUs1ZDVISFJDV05GZFFBMllIVm5GWHFjKzJpQ0NsclVkRnBqTngvaVRVOElaeml6dGJvWFFZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MjgzNzI3CWZpbGU6Tm92ZWxPUy5hcHAudGFyLmd6Cmd4TVNXVTBXTGJzT0hObTlYdG1Vb2xlK1ZqZlB0ZHVLZHdXbVhNUDVtay81NlhDbndpd1djYmtidDJNOHduY0NkcExTY281U3VkcWZzWndycVpZdkNBPT0K"
     },
     "darwin-x86_64": {
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.1/NovelOS-intel.app.tar.gz",
-      "size": 18658043,
-      "sha256": "42c1236737143e586f20858263f22cb4d487d9dd1e94348af888a15b61c1fd9f",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkZxaEZxMHJUQlRXSXZWQmo3QjFJSnFta2NuM1QySE4wS05ETnA0c1lLdytvMld4MHVJNml0UE1uWW54MW11ZkdvbGZlMWd5T3NETjgvQzBIQWJ3UWdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzg2NDk2CWZpbGU6Tm92ZWxPUy1pbnRlbC5hcHAudGFyLmd6CkYycHpTb3NrWXBSQ1F5QWNUL0QrQUhCbTBIUHpXRkZhRzNVSVhHcjJCUDhOU0lXSXdHeWFva1dTR2RDMDZnY0lkNjRWblhBejI5clZMenRTYVRRK0RnPT0K"
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.2/NovelOS-intel.app.tar.gz",
+      "size": 18655450,
+      "sha256": "2ca8ccdddca2f9a4db4cb85d19bf5e7b11527efc085d43ccb6e96c4f8a5649f9",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkdRZjUwcVN4ZkJiTHhBT1J4Z3FJTGJUYktVaHdHeGYveHcvZGk3ckFOUnhmUy9kSnNnaXZQU3VMVWZ5Z0VXU0M4MUVPMi9oWW5uMFlhaFNpYnplS2dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MjgzNzI5CWZpbGU6Tm92ZWxPUy1pbnRlbC5hcHAudGFyLmd6CjFkME1SR3dMdnBmL3VCaEFBYi9vYnZGT0t2QllrNW0wemptU0xqRGVxUTlSVEhwVjNXUUU5N1ArMGJzNmhReFUwNVM1cW80bGxhWVZSZEYxaEtrYkJ3PT0K"
     },
     "windows-x86_64-nsis": {
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.1/NovelOS-Setup.exe",
-      "size": 13530657,
-      "sha256": "bebaab8ef3399f22be2b8eebef4455a12fdb4f5ccb72bfe07e7c13157a4e7dab",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkd5NGk1TjBTOHpsSDlkNGFuKzZBRkVoUXJEVG1mc2RwaTY2a05HYzVYNURVaE42SVd6NEkrbGZiY0s2ZzJQcTJQUHM4OG1QVlNqM1N1Y2VaL2h6emdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzg2NDk3CWZpbGU6Tm92ZWxPUy1TZXR1cC5leGUKWkxCWjB0bzM1Wjd2ZHhycDZKMytkaDRJRzkwYVJ6V1JJaGhoQ3lvVklUcjJWeFdWVzFFN2FidGM3S1pTZU5VclBIeEYvYjZWQzVQcFhlaGNlS2pXRHc9PQo="
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.2/NovelOS-Setup.exe",
+      "size": 13522738,
+      "sha256": "efada85e900c61bcef3c0ef67b5557f83851e3986319f521ac0999abb2ab0ee5",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVk1HY1Q3ek14dytPanJEVnNBTUNBM2RMQkw1VmF1ZlV1VlpzZC9BZmtnb3lMWUYvbjVTMGptZmExSFc0cW54ZzVBT0tqYVVSYzQzNGtTMUdIYXJ2K3dvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MjgzNzMwCWZpbGU6Tm92ZWxPUy1TZXR1cC5leGUKUTIyMHdyRDd6VzhKdkI3WWp3R2lPSWRPb0pmNk40c3BjaUFROWI5TmM5QXpZaVM5czNDVERWOVlkY2lxbXBreVlKNEo2MS9GdUVrM01nZEZQbWNlQVE9PQo="
     },
     "windows-x86_64-msi": {
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.1/NovelOS-Setup.msi",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.2/NovelOS-Setup.msi",
       "size": 15761408,
-      "sha256": "baf4daede8b1e0e180b085476600125203915878737dbb6dfdedc7e320b1d47d",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkllckFPV1VOWklOd1RQdUJhU2NKcXJCYk1vNitaQ2ZETVk5RkxMMDBOUWMzRUZYTDdta3RZTDA2T3lmQ1ZFQ3hQd2phbFJGdy9jaDBWanBidkMwWlE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzg2NDk4CWZpbGU6Tm92ZWxPUy1TZXR1cC5tc2kKQldpV1l1Q0VvSytIUE4rTGFtQmQ0ZW1xdWFwM28rU2tkcFdlSk8yUDFvNXAwaDRmNWpjNVlXbzVub2hyWUpJLzl4eFRGNHdGQmEyaUg5ZStuZFBxRHc9PQo="
+      "sha256": "12967dd079e768e2974d3e0c1359763deaa73e03b567035aeab130cf99972e5f",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkI2MTBhNXBZU0FBV2hVK0wzbWx0T05SOHkwbEhkY0JERlhKdFdhWEtPMlRYY1A3L2pnazJhdHN3NVJBL3NrYWFhS00yZjdEbXdkU3kvc2RCQjFJTWdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MjgzNzMxCWZpbGU6Tm92ZWxPUy1TZXR1cC5tc2kKT29VYm5Qek5GQjNKVmxBRE9QUXZ6c0VScUtEdnYrQzdVNTNkS2xBR3BzWEdMY1BkS2pPRGEraW9YUzR3TVQrazFXeDV1ZkNwZ3p2L1IvU1ZMODI5Qnc9PQo="
     }
   },
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkQ5MTB5VVF2S2NMcFREV1JyMndBcEs3SlY2VklyVCtlZEhzR244TEI1NlM0SmhGaTBSbjA1bWhYQWVCRzA1WHZKV0ZrNHpoQTRXazVFQXZVUUVHRHdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzg2NDk5CWZpbGU6Tm92ZWxPUy1TZXR1cC5kbWcKNkswMytXcGFLbkVNNWNKanJUdlpFNndjSmllRDJRN3BQWW1lNk5wSW0ydGVncURvUHNLR05qWHZjTVhhUlpnMHpXRnNLdVFEdDEwOVJvdjRSNkQvQnc9PQo=",
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.1/NovelOS-Setup.dmg"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkprNEpXcVlGdnBybGh2Ymk2bXJMdUhFTUVraW5sUjRlcmdjTHRhbGlRcmp4Nm1TeGloaDk2U0lYNW4wSnVJakh6a2xvclp4TElPSm5YdEJ1aXdLdUFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MjgzNzMyCWZpbGU6Tm92ZWxPUy1TZXR1cC5kbWcKZ2p5L3V6VEN3b29yaDNjWlVZNkRQUmoyNm1RMU13RTRNdXlWRFBTTVQ2Y3dUdWMwZTRNSS9oWGovaVAvMk1nazhmZ0FqUFo3WUErNXBMejJFaGFCQXc9PQo=",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.2/NovelOS-Setup.dmg"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkJTeFZ5dHN5ci9LNUNQTEQxRnI3WjJyR3ZtenQ0NmxzeGRaZHJWNGtRVGthQUk1NWt6OVlUS1NzaG9uTnVrSmlnOU9XdFhxdUVuYmphMlZGTWlFOVFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzg2NTAwCWZpbGU6Tm92ZWxPUy1TZXR1cC1pbnRlbC5kbWcKRHRVeEhqZXJvM3dUUVNIb3JrOWluK25HUzFQWERVQzVJSEJFUGQxNXI3V0tldnVzcE9qdW5RNGtOU0FUb0U3aTFnZDNmZDNEY0RMd1NjaEorU3hpQ3c9PQo=",
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.1/NovelOS-Setup-intel.dmg"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVklmT3FVTVNSTm1KZkdyWTBpUkNZTVFzaGlzMnkyVXJzSUpzMUtxZDhWNXZQZjJheHU1cjF5TGwzQW9oNmVXeC9lSTgzWEdTcFVIM0VoTjVONnpQZ1FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MjgzNzM0CWZpbGU6Tm92ZWxPUy1TZXR1cC1pbnRlbC5kbWcKemViZ2hKZ25ZOXJqclFxTXNQL3ZjbjZ5ZGRFazBrUWdRQ2IybmZuTzh2NTIyZVJURTE5RHdRSEpXbHVDVzVycEd6K3JVVkUxTGhyeUZqY05jRlVUQXc9PQo=",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.2/NovelOS-Setup-intel.dmg"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkllckFPV1VOWklOd1RQdUJhU2NKcXJCYk1vNitaQ2ZETVk5RkxMMDBOUWMzRUZYTDdta3RZTDA2T3lmQ1ZFQ3hQd2phbFJGdy9jaDBWanBidkMwWlE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNzg2NDk4CWZpbGU6Tm92ZWxPUy1TZXR1cC5tc2kKQldpV1l1Q0VvSytIUE4rTGFtQmQ0ZW1xdWFwM28rU2tkcFdlSk8yUDFvNXAwaDRmNWpjNVlXbzVub2hyWUpJLzl4eFRGNHdGQmEyaUg5ZStuZFBxRHc9PQo=",
-      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.1/NovelOS-Setup.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRcXlDUjNMRDVNVkI2MTBhNXBZU0FBV2hVK0wzbWx0T05SOHkwbEhkY0JERlhKdFdhWEtPMlRYY1A3L2pnazJhdHN3NVJBL3NrYWFhS00yZjdEbXdkU3kvc2RCQjFJTWdJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0MjgzNzMxCWZpbGU6Tm92ZWxPUy1TZXR1cC5tc2kKT29VYm5Qek5GQjNKVmxBRE9QUXZ6c0VScUtEdnYrQzdVNTNkS2xBR3BzWEdMY1BkS2pPRGEraW9YUzR3TVQrazFXeDV1ZkNwZ3p2L1IvU1ZMODI5Qnc9PQo=",
+      "url": "https://github.com/novelos-studio/download/releases/download/v1.5.2/NovelOS-Setup.msi"
     }
   }
 }
